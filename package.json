@@ -1,0 +1,43 @@
+{
+    "name": "vsls-redux",
+    "displayName": "vsls-redux",
+    "description": "A thin redux wrapper around the Live Share API to enable easily creating collaborative VS Code extensions",
+    "main": "lib/index.js",
+    "types": "lib/index.d.ts",
+    "version": "1.0.1",
+    "publisher": "daytonellwanger",
+    "author": "daytonellwanger",
+    "scripts": {
+        "build": "tsc -p ./",
+        "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+        "lint": "tslint -p tsconfig.json",
+        "prepare": "npm run build",
+        "prepublishOnly": "npm run lint"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/vsls-contrib/vsls-redux"
+    },
+    "keywords": [
+        "Live",
+        "Share",
+        "Redux"
+    ],
+    "bugs": {
+        "url": "https://github.com/vsls-contrib/vsls-redux/issues"
+    },
+    "homepage": "https://github.com/vsls-contrib/vsls-redux",
+    "dependencies": {
+        "redux": "^4.0.1",
+        "vsls": "^0.3.967"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.21",
+        "tslint": "^5.8.0",
+        "@types/node": "^8.10.25",
+        "prettier": "^1.16.4",
+        "tslint-config-prettier": "^1.18.0"
+    },
+    "files": ["lib/**/*"]
+}
