@@ -24,7 +24,7 @@ import { vslsStoreEnhancer } from 'vsls-redux';
 const store = createStore(reducer, <any> vslsStoreEnhancer());
 ```
 
-(Note that you must cast the enhancer to `<any>` if using TypeScript because the redux typings are incorrect for store enhancers.)
+>Note that you must cast the enhancer to `<any>` if using TypeScript because the redux typings are incorrect for store enhancers.
 
 This adds middleware to the redux store that will ensure that all guests receive all synced actions in the same order.
 
@@ -58,4 +58,4 @@ import { shareState } from 'vsls-redux';
 const store = createStore(shareState(reducer));
 ```
 
-(Note that there is currently a limitation where only one slice of state can be synced).
+>Note that there is currently a limitation where only one slice of state can be synced.
