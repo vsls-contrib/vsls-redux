@@ -10,10 +10,6 @@ jobs:
           versionSpec: 8.x
       - script: npm install
         displayName: 'npm install'
-      - script: npm run compile
-        displayName: 'npm compile'
-      - script: 'node node_modules/vscode/bin/test'
-        displayName: 'Run tests'
       - task: DotNetCoreInstaller@0
         displayName: 'Use .NET Core sdk 2.1.300'
         inputs:
@@ -37,10 +33,6 @@ jobs:
           versionSpec: 8.x
       - script: npm install
         displayName: 'npm install'
-      - script: npm run compile
-        displayName: 'npm compile'
-      - script: 'node node_modules/vscode/bin/test'
-        displayName: 'Run tests'
   - job: Linux
     pool:
       name: Hosted Ubuntu 1604
@@ -52,14 +44,8 @@ jobs:
           versionSpec: 8.x
       - script: npm install
         displayName: 'npm install'
-      - script: npm run compile
-        displayName: 'npm compile'
       - script: |
           set -e
           /usr/bin/Xvfb :10 -ac >> /tmp/Xvfb.out 2>&1 &
           disown -ar
         displayName: 'Start xvfb'
-      - script: 'node node_modules/vscode/bin/test'
-        displayName: 'Run tests'
-        env:
-          DISPLAY: :10
