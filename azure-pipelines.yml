@@ -21,7 +21,6 @@ jobs:
           nugetpat: 'vscloudkernel-nuget'
           language: typescript
           githubpat: 'vsls-contrib'
-          nugetVersion: '0.1.819-alpha-ge556e1972c'
   - job: macOS
     pool:
       name: Hosted macOS
