@@ -14,7 +14,6 @@
         "build": "tsc -p ./",
         "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
         "lint": "tslint -p tsconfig.json",
-        "prepare": "npm run build",
         "prepublishOnly": "npm run lint"
     },
     "repository": {
@@ -42,5 +41,7 @@
         "prettier": "^1.16.4",
         "tslint-config-prettier": "^1.18.0"
     },
-    "files": ["lib/**/*"]
+    "files": [
+        "lib/**/*"
+    ]
 }
