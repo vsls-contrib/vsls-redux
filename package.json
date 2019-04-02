@@ -4,7 +4,7 @@
     "description": "A thin redux wrapper around the Live Share API to enable easily creating collaborative VS Code extensions",
     "main": "lib/index.js",
     "types": "lib/index.d.ts",
-    "version": "1.0.1",
+    "version": "1.0.3",
     "publisher": "daytonellwanger",
     "author": "daytonellwanger",
     "scripts": {
@@ -38,5 +38,7 @@
         "prettier": "^1.16.4",
         "tslint-config-prettier": "^1.18.0"
     },
-    "files": ["lib/**/*"]
+    "files": [
+        "lib/**/*"
+    ]
 }
