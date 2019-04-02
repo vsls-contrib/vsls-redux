@@ -48,7 +48,7 @@ export const vslsStoreEnhancer: VSLSReduxStoreEnhancer = (actionFilter = (action
   next: StoreCreator,
 ) => (reducer: Reducer, initialStateOrEnhancer?: DeepPartial<any> | StoreEnhancer, enhancer?: StoreEnhancer): Store => {
   const vslsRedux = new VSLSRedux();
-  const middlewareEnhancer = applyMiddleware(vslsRedux.createMiddleware());
+  const middlewareEnhancer = applyMiddleware(vslsRedux.createMiddleware(actionFilter));
   let store: Store;
   if (typeof initialStateOrEnhancer === 'object') {
     // DeepPartial<any>
