@@ -14,13 +14,13 @@ jobs:
         displayName: 'Use .NET Core sdk 2.1.300'
         inputs:
           version: 2.1.300
-      - task: vsintellinav.vsck-service-endpoint.build-task.upload-cache-build-task@0
-        displayName: 'VS IntelliNav Upload'
+      - task: RichCodeNavIndexer@0
         inputs:
-          vsckEndpoint: 'vscloudkernel-dev'
-          nugetpat: 'vscloudkernel-nuget'
-          language: typescript
-          githubpat: 'vsls-contrib'
+          serviceConnection: 'rich-code-nav'
+          nugetServiceConnection: 'rich-code-nav-nuget'
+          languages: typescript
+          githubServiceConnection: 'vsls-contrib'
+          serviceEndpoint: 'https://prod.richnav.vsengsaas.visualstudio.com'
   - job: macOS
     pool:
       name: Hosted macOS
