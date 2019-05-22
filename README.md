@@ -1,5 +1,7 @@
 # vsls-redux
 
+[![](https://aka.ms/vsls-badge)](https://aka.ms/vsls)
+
 vsls-redux makes authoring collaborative VS Code extensions simple by providing a thin redux wrapper around the Live Share API. It allows you to specify which piece of your application state you want to synchronize when a guest joins a session and which actions you would like to sync. vsls-redux will then handle syncing the initial state and ensuring that all participants have all synced actions dispatched in the same order. Outside of a Live Share session, your extension will behave like an ordinary redux app.
 
 ## Quick Start
