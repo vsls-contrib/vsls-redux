@@ -1,0 +1,55 @@
+{
+    "name": "vsls-redux-counter",
+    "displayName": "VSLS Redux Counter",
+    "description": "A collaborative counter extension powered by vsls-redux",
+    "version": "0.0.1",
+    "publisher": "dayton",
+    "engines": {
+        "vscode": "^1.25.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "*"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "vslsreduxcounter.increment",
+                "title": "Increment"
+            },
+            {
+                "command": "vslsreduxcounter.decrement",
+                "title": "Decrement"
+            },
+            {
+                "command": "vslsreduxcounter.incrementifodd",
+                "title": "Increment If Odd"
+            },
+            {
+                "command": "vslsreduxcounter.incrementasync",
+                "title": "Increment Async"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install"
+    },
+    "dependencies": {
+        "redux": "^4.0.1",
+        "vsls": "^0.3.967",
+        "vsls-redux": "^1.0.1"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.21",
+        "tslint": "^5.8.0",
+        "@types/node": "^8.10.25",
+        "@types/mocha": "^2.2.42"
+    }
+}
